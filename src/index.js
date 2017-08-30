@@ -1,4 +1,4 @@
-//require('/main.scss');
+
 
 /*
 import _ from 'lodash';
@@ -14,3 +14,5 @@ function component() {
 
 document.body.appendChild(component());
 */
+// require('/main.scss');
+// require('file?name=[name].[ext]!index.html');
