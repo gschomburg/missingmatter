@@ -3,10 +3,15 @@ sans-serif;
 $copy-font: 'Lato',
 sans-serif;
 
-$light-copy: #EEEEEE;
+
 
 $dark-bg-color: #252936;
 $light-bg-color: #f0e6e7;
+$colored-bg-color: #751432;
+
+$light-copy: #EEEEEE;
+$dark-copy: $dark-bg-color;
+
 $light-accent-color: #dfe89a;
 
 $tile-padding: 2em;
@@ -14,10 +19,13 @@ $nav-width: 100px;
 
 //reset
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
 body {
@@ -29,7 +37,7 @@ body {
 }
 
 .container {
-	margin-left:100px;
+	margin-left: 100px;
 }
 
 .section {
@@ -48,7 +56,7 @@ body {
 	min-height: 10px;
 	padding: $tile-padding;
 	position: relative;
-	overflow:hidden;
+	overflow: hidden;
 }
 
 .col-full {
@@ -63,134 +71,108 @@ body {
 	flex-basis: 33.33%;
 }
 
-#nav{
-	// width:100%;
-	height:100%;
-	
+#nav {
+	width: 100px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden; // min-height:900px;
 	position: fixed;
-	z-index:4;
-	color:$light-copy;
-	font-family:$display-font;
-	overflow:hidden;
-	.nav-wrapper{
-		width:100px;
-		height: 100%;
-		overflow: hidden;
-		background-color:black;
-		transition: width .25s;
-		position:relative;
-		top:0;
-		bottom:0;
-		left:0;
-		right:-100;
-	}
-	.nav-header{
-		// background-color:red;
+	z-index: 2;
+	color: $light-copy;
+	font-family: $display-font;
+	background-color: black;
+	transition: width .25s; // .nav-wrapper{
+
+	.nav-header {
 		height: $nav-width;
 		position: relative;
+		// width:1000px;
 	}
-	.nav-mark{
+	.nav-mark {
 		width: 80px;
 		height: 80px;
-		background-color:yellow;
+		background-color: white;
 		position: absolute;
-		top:10px;
+		top: 10px;
 		left: 10px;
-		border-radius:100px;
+		border-radius: 100px;
 	}
-	.logo-type{
-		display:block;
+	.logo-type {
+		display: block;
 		position: absolute;
-		bottom:10px;
+		bottom: 10px;
 		left: $nav-width;
-		padding-left:$tile-padding;
-		.logo-text{
-			font-size: 2em;
+		padding-left: $tile-padding;
+		.logo-text {
+			font-size: 1.7em;
 		}
 	}
-	&.open{
-		.nav-wrapper{
-			width:100%;
-			// right:0;
-		// min-height: 900px;
-		}
+	&.open {
+		width: 100%;
 	}
-	a{
+	a {
 		text-decoration: none;
-		color:white;
-		position:relative;
-		span{
-			position:absolute; 
-			width:100%;
-			height:100%;
-			top:0;
+		color: white;
+		position: relative;
+		span {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
 			left: 0;
 			z-index: 1;
 		}
 	}
-	.section-links{
+	.section-links {
+
 		list-style-type: none;
-		// background-color:blue;
-
-		// position: relative;
-		// top:0;
-		// right:0;
-		// bottom:0;
-		// left:$nav-width;
-		// padding: $tile-padding $tile-padding
-
-		padding:0;
+		padding: 0;
 		margin: 0;
 		margin-left: $nav-width;
 
 		display: flex;
 		flex-wrap: wrap;
 		li {
-			position:relative;
 			padding: $tile-padding;
-			div{
-				color:white;
+			div {
+				color: white;
 			}
-			// a{
-			// 	background-color:blue;
-			// 	display: block;
-			// 	position:relative;
-			// 	top:0;
-			// 	bottom:0;
-			// 	// height: 100%;
-			// 	padding: $tile-padding;
-			// 	color:white;
-			// 	&:hover{
-			// 		background-color:white;
-			// 		color: black;
-			// 	}
-			// }
-			&:hover{
-				background-color:white;
-				div{
+			&:hover {
+				background-color: white;
+				div {
 					color: black;
 				}
 			}
 			flex-basis: 33.33%;
-			flex-shrink: 1;
-			flex-grow: 1;
-			
-			cursor:pointer;
-			// box-sizing:border-box;
+
+			cursor:pointer; // box-sizing:border-box;
 			&:before {
 				content: '';
 				float: left;
 				padding-top: 50%;
 			}
-			
 
-			div{
+
+			div {
 				font-size: 2em;
 			}
 		}
 	}
 }
 
+.block-quote{
+	// background-color:$light-bg-color;
+	// padding: $tile-padding;
+	width: 66%;
+	margin: $tile-padding auto;
+	color:$dark-copy;
+	font-family:$display-font;
+	font-size:1.2em;
+	p{
+		margin-top: 0;
+	}
+}
 
 .section-head {
 	color: $light-copy; // height: 500px;
@@ -233,10 +215,17 @@ body {
 .light-theme {
 	background-color: $light-bg-color;
 }
+.color-theme{
+	background-color: $colored-bg-color;
+	color: $light-copy;
+	.title {
+		color: $light-accent-color;
+	}
+}
 
 .img-container {
-	&.round{
-		border-radius:100%;
+	&.round {
+		border-radius: 100%;
 		overflow: hidden;
 	}
 	img {
@@ -278,6 +267,7 @@ body {
 }
 
 
+
 /*Team formats*/
 
 .credit {
@@ -293,8 +283,8 @@ body {
 
 //Media queries
 @media (max-width: 450px) {
-  body {
-    /*font-size: 10px;*/
-    font-size: 14px;
-  }
+	body {
+		/*font-size: 10px;*/
+		font-size: 14px;
+	}
 }
