@@ -1,5 +1,7 @@
 
-
+//html to watch
+require('../dist/index.html')
+require('../dist/tara.html')
 /*
 import _ from 'lodash';
 

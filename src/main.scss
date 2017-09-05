@@ -1,6 +1,67 @@
+$display-font:    'Dosis', sans-serif;
+$dark-bg-color: #252936;
+$light-bg-color: #f0e6e7;
+$light-accent-color: #dfe89a;
+
+
 body{
-  background-color: #ff0ff0;
+  background-color: #fffff0;
+  margin:0;
 }
+
 img{
   width:80px;
+}
+
+.container{
+	
+}
+.section{
+	border: 1px solid green;
+	margin:0 auto;
+	display:flex;
+	flex-wrap:wrap;
+}
+.tile{
+	// border: 1px solid red;
+	// background-color:blue;
+	flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 50%;
+    // width:200px;
+	min-height:200px;
+	padding:1em;
+	box-sizing:border-box;
+}
+.col-full{
+	flex-basis: 100%;
+}
+.col-two-third{
+	flex-basis: 66.66%;
+}
+.col-one-third{
+	flex-basis: 33.33%;
+}
+
+//titles
+.title{
+	font-family: $display-font;
+	font-weight:300;
+
+}
+.large-title{
+	font-size: 6em;
+}
+.medium-title{
+	font-size: 2em;
+}
+
+.dark-theme{
+	background-color:$dark-bg-color;
+	.title{
+		color: $light-accent-color;
+	}
+}
+.light-theme{
+	background-color:$light-bg-color;
 }
