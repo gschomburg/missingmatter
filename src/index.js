@@ -2,6 +2,8 @@
 //html to watch
 require('../dist/index.html')
 require('../dist/tara.html')
+
+var $ = require("jquery");
 /*
 import _ from 'lodash';
 
@@ -18,3 +20,8 @@ document.body.appendChild(component());
 */
 // require('/main.scss');
 // require('file?name=[name].[ext]!index.html');
+console.log('hello');
+
+$('#nav').click(function() {
+  $(this).toggleClass('open');
+});
