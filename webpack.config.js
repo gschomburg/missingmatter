@@ -23,9 +23,6 @@ module.exports = {
   plugins: [
        new ExtractTextPlugin('main.css', {
            allChunks: true
-       }),
-       new CopyWebpackPlugin([
-            { from: './src/images' , to: './images'}
-        ])
+       })
    ]
 }
