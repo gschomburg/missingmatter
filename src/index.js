@@ -2,6 +2,7 @@
 //html to watch
 require('../dist/index.html')
 require('../dist/tara.html')
+require('../dist/goodestmedia.html')
 
 var $ = require("jquery");
 /*
@@ -24,4 +25,9 @@ console.log('hello');
 
 $('#nav').click(function() {
   $(this).toggleClass('open');
+});
+
+$("#nav .section-links li").click(function () {
+	window.open($(this).find("a:first").attr("href"));
+	return false;
 });
