@@ -274,10 +274,15 @@ a {
 }
 
 .block-quote {
-	width: 66%;
-	margin: $tile-padding auto; // color:$dark-copy;
+	width: 80%;
+	margin: $tile-padding auto;
+	padding: $tile-padding;
 	font-family: $display-font;
 	font-size: 1.2em;
+	// background-color: $light-bg-color;
+	// color: $dark-copy;
+	background-color: $col_c;
+	color: $light-copy;
 }
 
 //index slide show
@@ -650,6 +655,49 @@ a {
 		}
 	}
 	margin-bottom: 1em;
+}
+
+
+/*featherlight overrides */
+
+.featherlight.vimeo .featherlight-content,
+.featherlight.image .featherlight-content {
+  background: black;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+}
+.featherlight.vimeo .featherlight-next,
+.featherlight.image .featherlight-next {
+  display: none;
+}
+.featherlight.vimeo .featherlight-previous,
+.featherlight.image .featherlight-previous {
+  display: none;
+}
+.featherlight.vimeo iframe,
+.featherlight.image iframe {
+  width: 90vw;
+  height: 50.625vw;
+  max-height: 90%;
+}
+.featherlight.vimeo .featherlight-close-icon,
+.featherlight.image .featherlight-close-icon {
+  left: 10px;
+  top: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  background: rgba(23, 35, 34, 0.75);
+  color: white;
+  line-height: 36px;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.featherlight.vimeo .featherlight-content:hover .featherlight-close-icon,
+.featherlight.image .featherlight-content:hover .featherlight-close-icon {
+  opacity: 1;
 }
 
 //Utils
