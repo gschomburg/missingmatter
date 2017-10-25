@@ -58,6 +58,10 @@ a {
 	text-decoration: none;
 }
 
+h2, h3{
+	font-weight: 500;
+}
+
 //layout
 .container {
 	margin-left: $nav-width;
@@ -163,6 +167,12 @@ a {
 		li {
 			line-height: 1.8em;
 			font-size: 1.8em;
+		}
+		.icon{
+			width:1em;
+			position:relative;
+			bottom:-.1em;
+			margin-right:.2em;
 		}
 	}
 	&.open {
